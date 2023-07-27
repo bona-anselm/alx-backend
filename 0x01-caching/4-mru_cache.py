@@ -7,6 +7,7 @@ from collections import OrderedDict
 class MRUCache(BaseCaching):
     """ A MRU based caching system """
     def __init__(self):
+        """ Initializes the cache """
         super().__init__()
         self.cache_data = OrderedDict()
 
@@ -24,6 +25,7 @@ class MRUCache(BaseCaching):
             self.cache_data[key] = item
 
     def get(self, key):
+        """ Retrieves data from the cache """
         if key is not None and key in self.cache_data:
             self.cache_data.move_to_end(key, last=False)
         return self.cache_data.get(key, None)
