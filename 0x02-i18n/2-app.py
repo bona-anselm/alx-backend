@@ -24,7 +24,7 @@ def index() -> str:
 
 
 @babel.localeselector
-def get_locale() - str:
+def get_locale() -> str:
     """
         Selects & determines the best match with our supported languages
     """
