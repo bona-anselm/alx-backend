@@ -4,17 +4,15 @@ from flask import Flask, render_template
 from flask_babel import Babel
 
 
-app = Flask(__name__)
-babel = Babel(app)
-
-
 class Config():
     """ COnfig files """
     LANGUAGES = ["en", "fr"]
-    BABEL_DEFUALT_LOCALE = "en"
-    BABEL_DEFUALT_TIMEZONE = "UTC"
+    BABEL_DEFAULT_LOCALE = "en"
+    BABEL_DEFAULT_TIMEZONE = "UTC"
 
 
+app = Flask(__name__)
+babel = Babel(app)
 app.config.from_object(Config)
 app.url_map.strict_slashes = False
 
