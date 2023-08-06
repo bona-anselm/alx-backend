@@ -11,8 +11,8 @@ babel = Babel(app)
 class Config():
     """ COnfig files """
     LANGUAGES = ["en", "fr"]
-    DEFUALT_LOCALE = "en"
-    DEFUALT_TIMEZONE = "UTC"
+    BABEL_DEFUALT_LOCALE = "en"
+    BABEL_DEFUALT_TIMEZONE = "UTC"
 
 
 app.config.from_object(Config)
