@@ -8,7 +8,7 @@ app = Flask(__name__)
 babel = Babel(app)
 
 
-class Config(object):
+class Config():
     """ COnfig files """
     LANGUAGES = ["en", "fr"]
     DEFUALT_LOCALE = "en"
@@ -19,7 +19,7 @@ app.config.from_object(Config)
 
 
 @app.route('/')
-def index():
+def index() -> str:
     """ Home route """
     return render_template("1-index.html")
 
