@@ -1,0 +1,13 @@
+{% block title %}
+  <title>{{ _("home_title") }}</title>
+{% endblock %}
+ 
+{% block body %}
+  <h1>{{ _("home_header") }}</h1>
+
+  {% if g.user %}
+    <p>{{ _("You are logged in as", username=g.user["name"]) }}</p>
+  {% else %}
+    <p>{{ _("You are not logged in.") }}</p>
+  {% endif %}
+{% endblock %}
