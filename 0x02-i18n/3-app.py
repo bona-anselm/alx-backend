@@ -20,7 +20,7 @@ app.url_map.strict_slashes = False
 @app.route('/')
 def index() -> str:
     """ Home route """
-    return render_template("2-index.html")
+    return render_template("3-index.html")
 
 
 @babel.localeselector
